@@ -1,0 +1,33 @@
+1.       Difference between ‘this’ and ‘let’ and when to use what, explain with examples.
+
+
+i)"this" keyword:
+"this" keyword value depends on where it is called.
+
+Examples
+function foo() {
+	console.log(this); //global object
+};
+
+app = {};
+app.foo = function() {
+	console.log(this); //points to app object
+}
+
+var link = document.getElementById("lid");
+link.addEventListener("click", function() {
+	console.log(this); //points to link
+}, false);
+
+
+ii)"let" keyword
+
+let is a block scope variable which allows you to declare variables that are limited to a scope of a block statement, or expression on which it is used
+
+Example: 
+  var count = 100;
+  if (count > 20){
+    let amount = 100
+    console.log(amount);// print 100
+  }
+console.log(amount); //in the console, it returns Uncaught ReferenceError: amount is not defined.means scope limited to block level
