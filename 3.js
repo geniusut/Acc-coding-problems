@@ -20,7 +20,7 @@ function getAllKeys(obj) {
             keyArr.push(key);
         }
     }
+    return  keyArr;
 }
 
-getAllKeys(sampleObj);
-console.log(keyArr); 
+getAllKeys(sampleObj); 
